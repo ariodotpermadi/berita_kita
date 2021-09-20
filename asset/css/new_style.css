@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+body 
+{ 
+    background-color:#FFFFFF;   
+    color:#333333; 
+    font-family:georgia,"times new roman",times,serif; 
+    font-size:100%; 
+    line-height:1em; 
+    margin:0;   
+    padding:13px 0; 
+    height: 4000px;
+} 

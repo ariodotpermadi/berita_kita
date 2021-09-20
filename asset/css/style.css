@@ -1,0 +1,441 @@
+
+
+  /*WRAPPER*/
+  .wrapper{   
+    
+    box-sizing: border-box;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin: 0 auto;    
+    
+    
+}
+
+
+  #main-container{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    flex-grow:1;
+  }
+
+  .main {
+    height:100%;
+    margin:0 auto;
+    display:-webkit-box;
+    display:-webkit-flex;
+    display:-ms-flexbox;
+    display:flex;
+  }
+
+  article {
+    -webkit-flex-grow:1;
+    flex-grow:1;
+    width:70%;
+    
+}
+aside {
+    -webkit-flex-shrink:0;
+    flex-shrink:0;
+    width:30%;
+    
+}
+
+
+  a{
+    color: white;
+  }
+  
+  p{
+    color: black;
+    padding: 0;
+    margin: 1px;
+  }
+
+  .searchbox{
+    margin:5px;  
+    padding: 5px;
+  }
+  .container-fluid{
+    color: white;
+  }
+  .logo_nav{
+    height: 80px;
+    width: 120px;
+    margin: 10px;
+    margin-left: 30px;
+  }
+
+
+  .box_logo{
+    width: 100%;
+    height: 10%;
+  }
+  
+
+  /*Box body atas*/
+  .mainbox1{
+    width: 90%;
+    height: 70%;      
+    margin-top: 20px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;      
+    box-sizing: border-box;    
+  }
+  .column1{
+    flex:100%;
+    max-width: 100%;
+    position: relative;      
+  }
+  .column1, .box1 , .box2 , .box3{
+    vertical-align: middle;
+    margin-top: 6px;
+    padding: 3px;
+  }
+
+  .box1{
+    float: left;
+    border-color: 2px solid black;
+    height: 100%;
+    width: 59%;
+  }
+  .box1 img{
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+  }
+  .box1 img p{
+    position: absolute;
+  }
+  .bawahKiriSubs{
+    margin-top: -130px;
+    margin-left: 50px;
+    font-size: 35px;
+    color: #ff0000;
+    
+  }
+  .bawahKiriSubs:hover{
+    color: aqua;
+  }
+  .bawahKiri:hover{
+    color: red;
+    text-decoration:none;
+  }
+  .bawahKiri{
+    margin-top: -10px;
+    margin-left: 50px;
+    font-size: 25px;
+    color: white;
+  }
+  .bawahKiriSubs2{
+    margin-top: -90px;
+    margin-left: 30px;
+    font-size: 30px;
+    color: red;
+  }
+  .bawahKiri2{
+    margin-top: -8px;
+    margin-left: 30px;
+    font-size: 22px;
+    color: white;
+  }
+  .bawahKiriSubs2:hover{
+    color: aqua;
+  }
+  .bawahKiri2:hover{
+    color: red;
+  }
+  .bawahKiriSubs3{
+    margin-top: -100px;
+    margin-left: 30px;
+    font-size: 30px;
+    color: red;
+  }
+  .bawahKiri3{
+    margin-top: -8px;
+    margin-left: 30px;
+    font-size: 22px;
+    color: white;
+    line-height: 25px;
+  }
+  .bawahKiriSubs3:hover{
+    color: aqua;
+  }
+  .bawahKiri3:hover{
+    color: red;
+  }
+  .bawahKiri, .bawahKiri2, .bawahKiri3 p{
+    padding-inline: 2px;
+  }
+    
+
+  .box2{      
+    float: right;      
+    height: 49%;
+    width: 40%;     
+  }
+  .box2 img{
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+  }
+  .box2 img p{
+    position: absolute;
+  }
+
+
+  .box3{
+    float: right;      
+    height: 50%;
+    width: 40%;   
+    
+  }
+  .box3 img{
+    width: 100%;
+    height: 99%;
+    border-radius: 4px;
+  }
+  .box3 img p{
+    position: absolute;
+  }
+
+
+  /*Design Berita terkini float:left*/
+  .flex-container{
+    display: flex;
+    flex-wrap:wrap;
+    
+    width: 50%;
+    margin: 55px;
+    float: left;
+    padding: 1px;
+
+  }
+
+  .flex-container > .card{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition:0.3s;
+    width: 48%;
+    margin: 5px;
+    padding: 2px;
+  }
+  .card img{
+    height: 50%;
+    width: 100%;
+    border-radius: 4px;
+  }
+  .card:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  .cardtext{
+    padding: 2px 16px;
+  }
+  .cardp{
+    font-size: 12px;
+    color: #A9A9A9;
+  }
+  .underlineh6{
+    text-decoration: none;
+  }
+  .underlineh6:hover{
+    text-decoration: underline;
+  }
+  .underlineh6 a{
+    color: black;
+  }
+
+  /*Membuat Tampilan Responsive*/
+  @media screen and (max-width: 1060px){
+    .flex-container{
+      width:67%;       
+    }
+    .flex-container-right{
+      width: 30%;
+      margin-left: 3%;
+    }
+    .footer{
+      width: auto;
+      float: none;
+    }
+    .footerdwn{
+      width: auto;
+      float: none;
+    }
+  }
+
+  /*Membuat Tampilan Responsive*/
+  @media screen and (max-width: 768px){
+    .flex-container{
+      width:100%;       
+    }
+    .flex-container-right{
+      width: 100%;
+      margin: 0;
+      border: none;
+    }
+    .footer{
+      width: auto;
+      float: none;
+    }
+    .footerdwn{
+      width: auto;
+      float: none;
+    }
+  }
+
+  /*Design Berita terkini float:right*/
+  
+  .flex-container-right{
+    display: flex;
+    flex-wrap:wrap;
+    height: 110%;
+    width: 36%;
+    margin: 60px;
+    float: right;
+    margin-top: -710px;
+    line-height: 20px;      
+  }
+
+  .recent-img{
+    width:100%;
+    height: 80px;
+    padding: 20px;
+    margin: 2.5px;
+  }
+
+  .recent-img img{
+    width: 100px;
+    height: 80px;
+    float: left;
+    margin-left: -19px;
+    margin-top: -20px;
+    border-radius: 4px;
+  }
+  .recent-img p{
+    float: left;
+    margin-left: 5px;
+    margin-top: -15px;
+    font-size: 15px;      
+  }
+  .std-u{
+    text-decoration: none;
+    line-height: 10px;
+  }
+  .std-u:hover{
+    text-decoration: underline;
+    transition: 10s ease-in;
+  }
+  .tgl-post{
+    float: left;
+    margin-left: 0px;
+    font-size: 5px;
+    color: gray;
+  }
+ 
+
+  /*Footer siar.com*/
+
+  
+
+  .footer{
+  width: 100%;
+  height: 150px;
+  padding:0 0 0 5px;
+  margin-top:auto;
+  line-height: 50px;
+  background: #ff0000;
+  color: white;
+  position:absolute;
+  font-size: 12px;
+  
+  }
+
+  .footerp{
+    color: #f8f8ff;
+    line-height: 40px;
+    text-align: right;
+    
+  }
+
+  .footerpp{
+    color: #f8f8ff;
+    line-height: 15px;
+    text-align: left;
+    margin: 10px;
+    margin-left: 20px;
+  }
+
+  .footermenu ul, .footermenu li{
+    margin: -50px 0 0 15px;
+    
+    list-style: disc;
+    float: right;
+  }
+
+  .footermenu li a{
+    text-decoration:none;
+    display: inline-block;
+    padding: 10px 5px;
+  }
+
+  .footermenu li a:hover{
+    text-decoration: underline;
+    color: black;
+  }
+
+  .footerdwn{
+    padding-right: 80px;
+  }
+
+  .icon_group{
+    width: 120px;
+    margin-top: 20px;
+    float: right;
+  }
+
+  .facebook{
+    width: 25px;
+    margin: 5px;      
+  }
+  .twitter{
+    width: 25px;
+    margin: 5px;      
+  }
+  .instagram{
+    width: 25px;
+    margin: 5px;      
+  }
+
+/*Design Tombol back To Top*/
+  .backTop{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    display:inline-block;
+    padding: 1em;
+    margin: 1em;
+    background:rgba(83, 82, 82, 0.3);
+    color: white;
+    font-size: medium;
+    z-index: 1;
+    width: 60px;
+    height: 60px;
+  }
+  .backTop:hover{
+    cursor: pointer;
+  }
+  .backTop img{
+    width: 60px;
+    height: 70px;
+    margin: -15px;
+    margin-top: -25px;
+
+  }
