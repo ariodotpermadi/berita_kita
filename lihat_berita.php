@@ -78,7 +78,8 @@ $data=mysqli_fetch_assoc($query);
       <div >
      
         <?php 
-        echo $tag;
+        echo $tag;?>
+        <?php
         $pecah=explode(",", $tag);
         for ($i=0; $i < count($pecah); $i++) { 
         echo $pecah[$i]."<br>";
