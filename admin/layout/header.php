@@ -25,6 +25,7 @@ session_start();
         <a href="list_kategori.php" class="w3-bar-item w3-button">List Kategori</a>
         <a href="list_admin.php" class="w3-bar-item w3-button">List Admin</a>
         <a href="list_komentar.php" class="w3-bar-item w3-button">Komentar</a>
+        <a href="list_video.php" class="w3-bar-item w3-button">Video</a>
         <a href="logout.php" class="w3-bar-item w3-button">LOGOUT</a>      
 </div>
 

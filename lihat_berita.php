@@ -76,11 +76,15 @@ $data=mysqli_fetch_assoc($query);
   <h4><strong>Tags</strong></h4>
   <hr style="border:2px solid red; width:23%; margin:0 0 10px 0;  ">
       <div >
-     
-        <?php 
-        echo $tag;?>
-        <?php
-        $pecah=explode(",", $tag);
+      
+      <?php
+      $query=mysqli_query($con,"SELECT * FROM berita WHERE id_berita='$id'");
+      $data=mysqli_fetch_array($query);
+      ?>
+
+
+        <?php echo $data['tag_isi'];
+        $pecah=explode(",", $data['tag_isi']);
         for ($i=0; $i < count($pecah); $i++) { 
         echo $pecah[$i]."<br>";
         }        
