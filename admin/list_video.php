@@ -16,6 +16,11 @@ if (!$_SESSION['login']){
     header('location:login.php');
 }
 ?>
+
+<?php
+$query=mysqli_query($con, "SELECT * FROM `video` ORDER BY `id_video` DESC ");
+$data=mysqli_fetch_assoc($query);
+?>
 <div class="container-fluid">
 <strong><h4>Upload videomu</h4></strong>
 <button class="btn btn-primary"><a href="tambah_video.php">+ Tambah video</a></button>
@@ -26,14 +31,25 @@ if (!$_SESSION['login']){
             <th>No.</th>
             <th>Judul Video</th>
             <th>Tanggal Video</th>
+            <th>Status</th>
             <th>Aksi</th>
             <th>Video</th>
         </tr>
     </thead>
     <tbody>
+        <?php $num=0; do{$num++?>
         <tr>
-
+            <td><?php echo "$num"?></td>
+            <td><?php echo $data['nama_video'];?></td>
+            <td><?php echo $data['tanggal_video'];?></td>
+            <td><?php echo $data['status_video'] == 1 ? "<span class='text-success'>Publish</span>" : "<span class='text-danger'>Draft</span>";?></td>
+            <td>
+                <a href="edit_video.php?id=<?php echo $data['id_video'];?>"><button class="btn btn-warning">Edit</button></a>
+                <a href="hapus_video.php?id=<?php echo $data['id_video'];?>"><button class="btn btn-danger">Hapus</button></a>
+            </td>
+            <td><video src="../upload_video/<?php echo $data['video_upload'];?>" style="width: 100px; height:100px"></video></td>
         </tr>
+        <?php } while ($data=mysqli_fetch_assoc($query));?>
     </tbody>
 </table>
 </div>
