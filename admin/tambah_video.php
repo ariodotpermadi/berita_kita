@@ -37,7 +37,7 @@ if (isset($_POST['video_upload'])) {
 <h3>Upload video</h3>
 <hr>
 <button class="btn btn-warning"><a href ="list_video.php">Kembali</a></button><br>
-<form action="" method="post" enctype="">
+<form action="" method="post" enctype="multipart/form-data">
     <div>
         <input type="hidden" name="id_video">
     </div>
