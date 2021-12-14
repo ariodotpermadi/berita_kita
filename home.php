@@ -38,7 +38,7 @@ while($data=mysqli_fetch_assoc($sql)){
      <a href="lihat_berita.php?id=<?php echo $id_berita;?>" class="judul"><strong><?php echo $judul_berita;?></strong></a>
      <img src="upload/<?php echo $gambar_berita;?>" alt="Picture">
      <p><?php echo substr($isi_berita, 0, 150);?> <a href="lihat_berita.php?id=<?php echo $id_berita;?>">selengkapnya...</a></p>     
-     <div class="posted"><p>POSTED ON <?php echo $tanggal_berita ;?></p></div>
+     <div class="posted"><p>POSTED ON <?php echo $tanggal_berita ;?></p> </div>
    </div>
  </div>
 
@@ -74,3 +74,6 @@ while($data=mysqli_fetch_assoc($sql)){
 </div>
 
 </div><!--End wrapper-->
+<!--Count comment disqus-->
+<script id="dsq-count-scr" src="//news-vmbvxez7pk.disqus.com/count.js" async></script>
+<!--End of Count comment disqus-->

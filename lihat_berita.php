@@ -158,82 +158,35 @@ $data=mysqli_fetch_assoc($query);
 </div> <!--End main-container-->
 
 
-<!--Kolom Komentar-->
-<div style="margin: -60px 0 0 -60px; width:fit-content; height:fit-content">
-<hr class="hr-bottom2">
-<!--Ambil data dari table komentar untuk tampilkan komentar-->
-<?php
 
-  $query=mysqli_query($con, "SELECT * FROM komentar WHERE id_berita='$id'  AND status_komentar=1 ORDER BY id_berita DESC");
-  while($data=mysqli_fetch_array($query)):
-?>
-
-<div class="col-sm-12">
-  <h5><strong><?php echo $data['nama'];?></strong></h5>  
-  
-    <div class=col-sm-1 style="margin:0 0 0 -18px">
-  <img src="asset/gambar/user.png" width="100%" alt="Cinque Terre">
-    </div>
-    <div class="col-sm-16" style="margin:-25px 0 0 30px">
-    <p><?php echo $data['isi_komentar'];?></p>
-  </div>
-</div>
-
-<?php endwhile;?>
 <hr>
 
-<!--Sistem komentar-->
-<?php
-//simpan komentar
 
-if (isset($_POST['tambah_komentar'])) {
-include "config/db_connect.php"  ;
-  $id_berita   =$_POST['id_berita'];
-  $status       =$_POST['status'];
-  $nama         =$_POST['nama'];
-  $email        =$_POST['email'];
-  $isi_komentar =$_POST['isi_komentar'];
-  $query=mysqli_query($con, "INSERT INTO komentar(id_berita, status_komentar, nama, email, isi_komentar ) VALUE('$id_berita', '$status', '$nama', '$email', '$isi_komentar') ");
-  
-  if ($query) {
-    echo"<div class='alert alert-success'>Komentar terkirim, menunggu persetujuan dari admin.</div>";
-  }else {
-    echo"<div class='alert alert-warning'>Komentar gagal!</div>";
-  } 
-} 
-?>
+<!--Uji coba komentar dengan disqus-->
 
-    <form  action="" method="post" >
-      <h5><strong>Tinggalkan Komentar</strong></h5>
-            <div class="form-group">
-                 <?php
-                 $id=$_GET['id'];
-                 $query=mysqli_query($con, "SELECT * FROM berita WHERE id_berita='$id' ORDER BY id_berita");
-                 $data=mysqli_fetch_assoc($query);
-                 ?>                  
-                <input type="hidden" name="id_berita" value="<?php echo $data['id_berita'];?>" class="form-control">
-              
-                <input type="hidden" name="status" value="0" class="form-control">                        
-            </div>
-            <div>
-              <input type="text" name="nama" placeholder="Nama" required/>
-            </div>
-            <br>
-            <div>
-              <input type="text" name="email" placeholder="Email" required/>
-            </div>            
-            <br>
-            <div>
-              <textarea name="isi_komentar" rows="10" placeholder="Komentar Anda..." required></textarea>
-            </div>
-            <br>
-            <div>
-              <button class="btn btn-success" type="submit" name="tambah_komentar">Tambahkan Komentar</button>
-            </div>
-          </form>
-</div><!--End of kolom komentar-->
-<br>
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://news-vmbvxez7pk.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
+
+
+<!--End of komentar disqus-->
 
 <!--Footer-->
 <div style="margin:0 0 0 -105px">
@@ -262,4 +215,5 @@ include "config/db_connect.php"  ;
 </div>
 </div><!--End footer-wrapper-->
   
+
 </div><!--End wrapper-->
