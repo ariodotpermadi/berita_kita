@@ -9,14 +9,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
  <!--tiny textarea-->
- <script src='https://cdn.tiny.cloud/1/eove7zpgwitufm8ssqfhflz4rvacnfwseq8imtzvak3mdws0/tinymce/5/tinymce.min.js' referrerpolicy="origin"></script>
-  <script>
-    tinymce.init({
-      selector: '#mytextarea'
-    });
-  </script>
-
-<script src="https://cdn.tiny.cloud/1/eove7zpgwitufm8ssqfhflz4rvacnfwseq8imtzvak3mdws0/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>  
+ 
 
 </head>
 <body>
@@ -78,16 +71,7 @@ if ($query) {
             </select><br>
 <label>Isi :</label> 
 <textarea name="isi" class="form-control" id="mytextarea" rows="10"><?php echo $data['isi_berita'];?></textarea>
-<script>
-    tinymce.init({
-      selector: 'textarea',
-      plugins: 'a11ychecker advcode casechange export formatpainter linkchecker autolink lists checklist media mediaembed pageembed permanentpen powerpaste table advtable tinycomments tinymcespellchecker',
-      toolbar: 'a11ycheck addcomment showcomments casechange checklist code export formatpainter pageembed permanentpen table',
-      toolbar_mode: 'floating',
-      tinycomments_mode: 'embedded',
-      tinycomments_author: 'Author name',
-   });
-  </script>
+
 
 
 
