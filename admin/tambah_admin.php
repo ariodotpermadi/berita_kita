@@ -34,7 +34,7 @@ if (isset($_POST['tambah'])) {
 
 
 ?>
-<div class="container-fluid">
+<div class="container-fluid ">
     <button class="btn btn-primary"><a href="list_admin.php">< Kembali</a></button>
 <form action="" method="post" enctype="">
     <label>Nama :</label> 
